@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Content from "./components/Content";
 import Carousel from "./components/Carousel";
+
 const Page = () => {
   return (
     <>

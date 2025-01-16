@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { Box, Card, CardContent, Typography, useTheme } from "@mui/material";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
@@ -31,7 +31,7 @@ const Carousel = () => {
         loop: true, // Enables infinite looping
         mode: "snap", // Snaps to slides
         slides: {
-          perView: 1, // Number of slides visible at once
+          perView: 3, // Number of slides visible at once
           spacing: 16, // Spacing between slides (in pixels)
         },
       },
@@ -74,7 +74,6 @@ const Carousel = () => {
   return (
     <Container maxWidth="md">
       <Box sx={{ width: "100%", overflow: "hidden" }}>
-        {" "}
         {/* Important for containing the slider */}
         <div ref={sliderRef} className="keen-slider">
           {data.map((slide, index) => (
