@@ -1,4 +1,5 @@
 import { Container, Box, Grid2, Link, Button } from "@mui/material";
+// import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -50,7 +51,7 @@ const Header = () => {
             Home
           </Link>
           <Link
-            href="#"
+            href="./About"
             color="#000"
             sx={{
               "&:hover": {

@@ -2,18 +2,11 @@
 import { Container, Box, Grid2, Typography } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFaceSmile } from "@fortawesome/free-solid-svg-icons";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Content from "./components/Content";
-import Carousel from "./components/Carousel";
 
 const Page = () => {
   return (
     <>
-      <Header />
-      <Hero />
-      <Content />
-      <Carousel />
+      <Container></Container>
       <Container maxWidth="lg">
         <Grid2
           container
