@@ -24,7 +24,13 @@ const Home = () => {
               flexDirection: { xs: "column", md: "row" },
             }}
           >
-            <Grid2 item xs={12} md={6} size={6} sx={{ padding: 3, mx: 4 }}>
+            <Grid2
+              item="true"
+              xs={12}
+              md={6}
+              size={6}
+              sx={{ padding: 3, mx: 4 }}
+            >
               <Typography variant="h4" color="#1090CB">
                 <span style={{ color: "#000" }}>Experienced </span>
                 mobile and web
@@ -45,7 +51,7 @@ const Home = () => {
                 <Button variant="outlined">View More</Button>
               </Box>
             </Grid2>
-            <Grid2 item xs={12} md={6} sx={{ my: 20 }}>
+            <Grid2 item="true" xs={12} md={6} sx={{ my: 20 }}>
               <img
                 width={400}
                 src="https://www.writemypapers.org/site/public/img_2021/bill6.png"
@@ -74,7 +80,7 @@ const Home = () => {
           }}
         >
           {/* Content Section */}
-          <Grid2 item xs={12} md={6} size={6}>
+          <Grid2 item="true" xs={12} md={6} size={6}>
             <Box
               sx={{
                 display: "flex",
@@ -124,7 +130,7 @@ const Home = () => {
           </Grid2>
 
           {/* Image Section */}
-          <Grid2 item xs={12} md={6} size={6}>
+          <Grid2 item="true" xs={12} md={6} size={6}>
             <Box
               sx={{
                 flex: 1,
@@ -161,7 +167,7 @@ const Home = () => {
           }}
         >
           {/* Image Section */}
-          <Grid2 item xs={12} md={6} size={6}>
+          <Grid2 item="true" xs={12} md={6} size={6}>
             <Box
               sx={{
                 flex: 1,
@@ -185,7 +191,7 @@ const Home = () => {
           </Grid2>
 
           {/* Content Section */}
-          <Grid2 item xs={12} md={6} size={6}>
+          <Grid2 item="true" xs={12} md={6} size={6}>
             <Box
               sx={{
                 display: "flex",
@@ -248,7 +254,7 @@ const Home = () => {
           }}
         >
           {/* Content Section */}
-          <Grid2 item xs={12} md={6} size={6}>
+          <Grid2 item="true" xs={12} md={6} size={6}>
             <Box
               sx={{
                 display: "flex",
@@ -298,7 +304,7 @@ const Home = () => {
           </Grid2>
 
           {/* Image Section */}
-          <Grid2 item xs={12} md={6}>
+          <Grid2 item="true" xs={12} md={6}>
             <Box
               sx={{
                 flex: 1,
