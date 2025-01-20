@@ -1,16 +1,13 @@
 "use client";
 import { Grid2, Typography } from "@mui/material";
 import { Container, Box } from "@mui/system";
-// import { Box, Grid2, Typography } from "@mui/material";
-// import { Container } from "@mui/material";
 import Carousel from "../components/Carousel";
 import Card from "@mui/material/Card";
-// import CardContent from "@mui/material/CardContent";
-
 import WebIcon from "@mui/icons-material/Web";
 import RocketIcon from "@mui/icons-material/Rocket";
 import SmartphoneIcon from "@mui/icons-material/Smartphone";
 import CloudIcon from "@mui/icons-material/Cloud";
+
 const Hero = () => {
   return (
     <>

@@ -1,5 +1,5 @@
+"use client";
 import { Container, Box, Grid2, Link, Button } from "@mui/material";
-// import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -84,9 +84,9 @@ const Header = () => {
             Blog
           </Link>
 
-          <Box sx={{ xs: 2, sm: 4, md: 4 }}>
-            <Button variant="contained">Contact Us</Button>
-          </Box>
+          <Button href="../ContactUs" variant="contained">
+            Contact Us
+          </Button>
         </Grid2>
       </Grid2>
     </Container>

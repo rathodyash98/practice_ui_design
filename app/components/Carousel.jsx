@@ -1,122 +1,112 @@
+"use client";
 import React from "react";
-import { Box, Card, CardContent, Typography, useTheme } from "@mui/material";
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
-import Image from "next/image";
-import { Container } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+import Subscribe from "./Items/Subscribe";
 
-const data = [
+const TeamInfo = [
   {
-    title: "Slide 1",
-    description: "Description for slide 1",
-    image: "/Rectangle12.jpg",
+    name: "John kabras",
+    role: "CEO",
+    image: "/member1.jpg",
   },
   {
-    title: "Slide 2",
-    description: "Description for slide 2",
-    image: "/Rectangle13.jpg",
+    name: "Phillips Shene Morris",
+    role: "COO",
+    image: "/member2.jpg",
   },
   {
-    title: "Slide 3",
-    description: "Description for slide 3",
-    image: "/Rectangle14.jpg",
+    name: "Equarn Shamir Mohmmad",
+    role: "Tech Lead",
+    image: "/member3.jpg",
+  },
+  {
+    name: "Janka Indrajith",
+    role: "Head of UX",
+    image: "/member4.jpg",
   },
 ];
-
-const Carousel = () => {
-  const theme = useTheme();
-  const [sliderRef] = useKeenSlider(
-    [
-      {
-        loop: true, // Enables infinite looping
-        mode: "snap", // Snaps to slides
-        slides: {
-          perView: 3, // Number of slides visible at once
-          spacing: 16, // Spacing between slides (in pixels)
-        },
-      },
-    ],
-    [
-      (slider) => {
-        let timeout;
-        let mouseOver = false;
-        function clearNextTimeout() {
-          clearTimeout(timeout);
-        }
-        function nextTimeout() {
-          clearTimeout(timeout);
-          if (mouseOver) return;
-          timeout = setTimeout(() => {
-            slider.next();
-          }, 3000); // Autoplay interval (3 seconds)
-        }
-        slider.on("created", () => {
-          slider.container.addEventListener("mouseover", () => {
-            mouseOver = true;
-            clearNextTimeout();
-          });
-          slider.container.addEventListener("mouseout", () => {
-            mouseOver = false;
-            nextTimeout();
-          });
-          nextTimeout();
-        });
-        slider.on("animationStarted", () => {
-          nextTimeout();
-        });
-        slider.on("animationEnded", () => {
-          slider.update();
-        });
-      },
-    ]
-  );
-
+const TeamSection = () => {
   return (
-    <Container maxWidth="md">
-      <Box sx={{ width: "100%", overflow: "hidden" }}>
-        {/* Important for containing the slider */}
-        <div ref={sliderRef} className="keen-slider">
-          {data.map((slide, index) => (
-            <Box
-              key={index}
-              className="keen-slider__slide"
-              sx={{ padding: theme.spacing(2) }}
-            >
-              <Card
-                sx={{
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                {slide.image && (
-                  <Box sx={{ position: "relative", height: 200 }}>
-                    {/* Fixed Height for Image */}
-                    <Image
-                      src={slide.image}
-                      alt={slide.title}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      sizes="10vw"
-                    />
-                  </Box>
-                )}
-                <CardContent sx={{ flexGrow: 1 }}>
-                  {/* Ensures content fills remaining space */}
-                  <Typography variant="h5" component="h2" gutterBottom>
-                    {slide.title}
+    <>
+      <Container maxWidth="lg">
+        <Box>
+          <Typography variant="h5" gutterBottom paddingBottom={2}>
+            Our Team
+          </Typography>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={1}
+            pagination={{
+              clickable: true,
+              type: "bullets",
+            }}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+            modules={[Pagination]}
+            style={{ paddingBottom: "80px" }}
+          >
+            {TeamInfo.map((member, index) => (
+              <SwiperSlide key={index}>
+                <Box
+                  sx={{
+                    width: "240px",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignContent: "center",
+                    backgroundColor: "white",
+                  }}
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    style={{
+                      borderTopLeftRadius: "12px",
+                      borderTopRightRadius: "12px",
+                      width: "240px",
+                      height: "220px",
+                    }}
+                  />
+                  <Typography
+                    variant="body"
+                    color="textSecondary"
+                    marginTop={2}
+                  >
+                    {member.role}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {slide.description}
+                  <Typography variant="h6" gutterBottom>
+                    {member.name}
                   </Typography>
-                </CardContent>
-              </Card>
-            </Box>
-          ))}
-        </div>
-      </Box>
-    </Container>
+                </Box>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <style jsx global>{`
+            .swiper-pagination-bullet {
+              background-color: #cfcfcf;
+              width: 10px;
+              height: 10px;
+              opacity: 1;
+            }
+            .swiper-pagination-bullet-active {
+              background-color: #6e00fa;
+              width: 24px;
+              height: 10px;
+              border-radius: 7px;
+            }
+          `}</style>
+        </Box>
+      </Container>
+      <Subscribe />
+    </>
   );
 };
 
-export default Carousel;
+export default TeamSection;

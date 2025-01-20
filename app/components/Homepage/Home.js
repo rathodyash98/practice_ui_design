@@ -1,15 +1,10 @@
-"use client";
-import {
-  Container,
-  Box,
-  Grid2,
-  Typography,
-  Button,
-  CardContent,
-  CardActions,
-} from "@mui/material";
+import { Box, Container, Grid2, Typography, Button } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFaceSmile } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
+import Subscribe from "../Items/Subscribe";
+import InfoCard from "../Items/InfoCard";
+import CompanyLogo from "../Items/Companylogo";
 
 const Home = () => {
   return (
@@ -44,11 +39,27 @@ const Home = () => {
                 completed projects. We build and develop mobile applications for
                 several top platforms, including Android & IOS.
               </Typography>
-              <Box sx={{ mt: 4 }}>
-                <Button sx={{ mx: 2 }} variant="contained">
+              <Box
+                sx={{
+                  mt: 4,
+                  display: "flex",
+                  flexDirection: { xs: "column", sm: "row" },
+                  justifyContent: "center",
+                  gap: 2,
+                }}
+              >
+                <Button
+                  sx={{ mx: 2, width: { xs: "100%", sm: "auto" } }}
+                  variant="contained"
+                >
                   Contact Us
                 </Button>
-                <Button variant="outlined">View More</Button>
+                <Button
+                  sx={{ width: { xs: "100%", sm: "auto" } }}
+                  variant="outlined"
+                >
+                  View More
+                </Button>
               </Box>
             </Grid2>
             <Grid2 item="true" xs={12} md={6} sx={{ my: 20 }}>
@@ -67,410 +78,406 @@ const Home = () => {
           </Grid2>
         </Box>
       </Container>
-
       <Container maxWidth="lg">
-        <Grid2
-          container
-          spacing={2}
-          sx={{
-            justifyContent: "center",
-            alignItems: "center",
-            color: "#fff",
-            my: "20px",
-          }}
-        >
-          {/* Content Section */}
-          <Grid2 item="true" xs={12} md={6} size={6}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: { xs: "column", md: "row" },
-              }}
-            >
-              <Box
-                sx={{
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginRight: { xs: "1rem", md: "1.8rem" },
-                  marginBottom: "40px",
-                  boxShadow: 1,
-                  backgroundColor: "#08d3bb",
-                }}
-              >
-                <FontAwesomeIcon
-                  icon={faFaceSmile}
-                  style={{ color: "white" }}
-                />
-              </Box>
-              <Box>
-                <Typography variant="h5">
-                  Lorem Ipsum is simply dummy text
-                </Typography>
-                <Typography variant="subtitle1" color="textSecondary">
-                  Lorem Ipsum is simply dummy text
-                </Typography>
-              </Box>
-            </Box>
-            <Typography variant="h4" component="h1" color="#1090CB" mt={5}>
-              <span>Lorem Ipsum </span>
-              <span style={{ color: "black" }}>
-                is simply dummy text of the printing.
-              </span>
-            </Typography>
-            <Typography variant="body1" color="textSecondary" mt={5}>
-              KODEX TECHNOLOGY (PVT) LTD is a team of experienced mobile and web
-              application builders measuring dozens of completed projects. We
-              build and develop mobile applications for several top platforms,
-              including Android & iOS.
-            </Typography>
-          </Grid2>
-
-          {/* Image Section */}
-          <Grid2 item="true" xs={12} md={6} size={6}>
-            <Box
-              sx={{
-                flex: 1,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                mb: { xs: 3, md: 0 },
-              }}
-            >
-              <img
-                src="https://cdn.psdrepo.com/images/2x/recent-activities-ios-app-freebies-s5.jpg"
-                width="100%"
-                height="auto"
-                alt="content-img"
-                style={{
-                  borderRadius: "8px",
-                }}
-              />
-            </Box>
-          </Grid2>
-        </Grid2>
-      </Container>
-
-      <Container maxWidth="lg">
-        <Grid2
-          container
-          spacing={2}
-          sx={{
-            justifyContent: "center",
-            alignItems: "center",
-            color: "#fff",
-            my: "20px",
-          }}
-        >
-          {/* Image Section */}
-          <Grid2 item="true" xs={12} md={6} size={6}>
-            <Box
-              sx={{
-                flex: 1,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                mb: { xs: 3, md: 0 },
-              }}
-            >
-              <img
-                src="https://cdn-ikpginp.nitrocdn.com/PRntyBdDPhmusWKVDuNFHSODyQxBrsGD/assets/images/optimized/rev-31bfdad/www.deuglo.com/wp-content/uploads/2024/08/Landing-Page-Design-Company-in-Noida-Bangalore-India-Deuglo.png"
-                width="100%"
-                height="auto"
-                alt="content-img"
-                style={{
-                  borderRadius: "8px",
-                }}
-              />
-            </Box>
-          </Grid2>
-
-          {/* Content Section */}
-          <Grid2 item="true" xs={12} md={6} size={6}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: { xs: "column", md: "row" },
-              }}
-            >
-              <Box
-                sx={{
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginRight: { xs: "1rem", md: "1.8rem" },
-                  marginBottom: "40px",
-                  boxShadow: 1,
-                  backgroundColor: "#81d4fa",
-                }}
-              >
-                <FontAwesomeIcon
-                  icon={faFaceSmile}
-                  style={{ color: "white" }}
-                />
-              </Box>
-              <Box>
-                <Typography variant="h5">
-                  Lorem Ipsum is simply dummy text
-                </Typography>
-                <Typography variant="subtitle1" color="textSecondary">
-                  Lorem Ipsum is simply dummy text
-                </Typography>
-              </Box>
-            </Box>
-            <Typography variant="h4" component="h1" color="#1090CB" mt={5}>
-              <span>Lorem Ipsum </span>
-              <span style={{ color: "black" }}>
-                is simply dummy text of the printing.
-              </span>
-            </Typography>
-            <Typography variant="body1" color="textSecondary" mt={5}>
-              KODEX TECHNOLOGY (PVT) LTD is a team of experienced mobile and web
-              application builders measuring dozens of completed projects. We
-              build and develop mobile applications for several top platforms,
-              including Android & iOS.
-            </Typography>
-          </Grid2>
-        </Grid2>
-      </Container>
-
-      <Container maxWidth="lg">
-        <Grid2
-          container
-          spacing={2}
-          sx={{
-            justifyContent: "center",
-            alignItems: "center",
-            color: "#fff",
-            my: "20px",
-          }}
-        >
-          {/* Content Section */}
-          <Grid2 item="true" xs={12} md={6} size={6}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: { xs: "column", md: "row" },
-              }}
-            >
-              <Box
-                sx={{
-                  width: "60px",
-                  height: "60px",
-                  borderRadius: "50%",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginRight: { xs: "1rem", md: "1.8rem" },
-                  marginBottom: "40px",
-                  boxShadow: 1,
-                  backgroundColor: "#673ab7",
-                }}
-              >
-                <FontAwesomeIcon
-                  icon={faFaceSmile}
-                  style={{ color: "white" }}
-                />
-              </Box>
-              <Box>
-                <Typography variant="h5">
-                  Lorem Ipsum is simply dummy text
-                </Typography>
-                <Typography variant="subtitle1" color="textSecondary">
-                  Lorem Ipsum is simply dummy text
-                </Typography>
-              </Box>
-            </Box>
-            <Typography variant="h4" component="h1" color="#1090CB" mt={5}>
-              <span>Lorem Ipsum </span>
-              <span style={{ color: "black" }}>
-                is simply dummy text of the printing.
-              </span>
-            </Typography>
-            <Typography variant="body1" color="textSecondary" mt={5}>
-              KODEX TECHNOLOGY (PVT) LTD is a team of experienced mobile and web
-              application builders measuring dozens of completed projects. We
-              build and develop mobile applications for several top platforms,
-              including Android & iOS.
-            </Typography>
-          </Grid2>
-
-          {/* Image Section */}
-          <Grid2 item="true" xs={12} md={6}>
-            <Box
-              sx={{
-                flex: 1,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                mb: { xs: 3, md: 0 },
-              }}
-            >
-              <img
-                src="https://vrsistem.com/wp-content/uploads/2019/09/home-man2.png"
-                width="100%"
-                height="auto"
-                alt="content-img"
-                style={{
-                  borderRadius: "8px",
-                }}
-              />
-            </Box>
-          </Grid2>
-        </Grid2>
-      </Container>
-
-      <Container maxWidth="lg">
-        <Grid2
-          container
+        <Box
           sx={{
             display: "flex",
-            flexDirection: {
-              xs: "column",
-              sm: "row",
-              justifyContent: "space-between",
-            },
+            flexDirection: { xs: "column", sm: "column", md: "row" },
+            justifyContent: "center",
+            alignItems: "center",
+            py: "40px",
+            gap: 4,
           }}
         >
-          {/* Use flexbox for horizontal layout */}
-          <Grid2
-            item="true"
-            xs={12}
-            sm={6}
-            backgroundColor="#eceff1"
-            borderRadius={6}
-            size={5.5}
-            sx={{ minWidth: 275, position: "relative" }}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: 2,
+            }}
           >
-            <CardContent>
-              <Typography variant="h5" gutterBottom fontWeight="bold">
+            <Box
+              sx={{
+                width: "80px",
+                height: "80px",
+                backgroundColor: "#EFEAFF",
+                borderRadius: "20px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img src="/website-content 1.png" alt="web" />
+            </Box>
+            <Box>
+              <Typography variant="h6">Web Application</Typography>
+              <Typography variant="body" color="textSecondary">
                 Lorem Ipsum is simply
               </Typography>
-              <Typography variant="body2" color="textSecondary">
-                KODEX TECHNOLOGY (PVT) LTD is a team of experienced mobile and
-                web applications and website builders measuring dozens of
-                completed projects. We build and develop mobile applications for
-                several top platforms, including Android & IOS.
+            </Box>
+          </Box>
+
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: 2,
+            }}
+          >
+            <Box
+              sx={{
+                width: "80px",
+                height: "80px",
+                backgroundColor: "#ECFFDA",
+                borderRadius: "20px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img src="/seo-tag 1.png" alt="seo" />
+            </Box>
+            <Box>
+              <Typography variant="h6">SEO</Typography>
+              <Typography variant="body" color="textSecondary">
+                Lorem Ipsum is simply
               </Typography>
-            </CardContent>
-            <CardActions sx={{ justifyContent: "center" }}>
-              <Button size="small" variant="contained">
-                View More
-              </Button>
-            </CardActions>
+            </Box>
+          </Box>
+
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: 2,
+            }}
+          >
+            <Box
+              sx={{
+                width: "80px",
+                height: "80px",
+                backgroundColor: "#DAE6FF",
+                borderRadius: "20px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img src="/immersive 1.png" alt="ar/vr" />
+            </Box>
+            <Box>
+              <Typography variant="h6">AR/VR Solutions</Typography>
+              <Typography variant="body" color="textSecondary">
+                Lorem Ipsum is simply
+              </Typography>
+            </Box>
+          </Box>
+
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: 2,
+            }}
+          >
+            <Box
+              sx={{
+                width: "80px",
+                height: "80px",
+                backgroundColor: "#FFE5DA",
+                borderRadius: "20px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img src="/coding (1) 1.png" alt="mob" />
+            </Box>
+            <Box>
+              <Typography variant="h6">Mobile Applications</Typography>
+              <Typography variant="body" color="textSecondary">
+                Lorem Ipsum is simply
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+      </Container>
+      <Box sx={{ borderBottom: "1px solid #D2D2D2" }}></Box>
+      <Container maxWidth="lg">
+        <Box
+          sx={{
+            textAlign: "center",
+            marginY: "50px",
+          }}
+        >
+          <Typography variant="h4" component={"h1"} gutterBottom>
+            Lorem Ipsum is simply dummy text of the printing.
+          </Typography>
+          <Typography variant="body" color="textSecondary" gutterBottom>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+            <br />
+            Lorem Ipsum has been the industry's
+          </Typography>
+        </Box>
+        <Grid2 container rowSpacing={6} direction={"row"}>
+          <Grid2
+            container
+            spacing={2}
+            sx={{
+              justifyContent: "center",
+              alignItems: "center",
+              color: "#fff",
+              my: "20px",
+            }}
+          >
+            {/* Content Section */}
+            <Grid2 size={{ xs: 12, md: 6 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: "60px",
+                    height: "60px",
+                    borderRadius: "50%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginRight: "1.8rem",
+                    marginBottom: "40px",
+                  }}
+                >
+                  <FontAwesomeIcon
+                    icon={faFaceSmile}
+                    style={{ color: "#08D3BB", backgroundColor: "#fff" }}
+                  />
+                </Box>
+                <Box>
+                  <Typography variant="h5" color="#000000">
+                    Lorem Ipsum is simply dummy text
+                  </Typography>
+                  <Typography variant="subtitle1" color="textSecondary">
+                    Lorem Ipsum is simply dummy text
+                  </Typography>
+                </Box>
+              </Box>
+              <Typography variant="h4" component="h1" color="#1090CB">
+                Lorem Ipsum
+                <span style={{ color: "black" }}>
+                  {" "}
+                  is simply dummy text of the printing.
+                </span>
+              </Typography>
+              <Typography variant="body1" color="textSecondary" mt={5}>
+                KODEX TECHNOLOGY (PVT) LTD is a team of experienced mobile and
+                web application builders measuring dozens of completed projects.
+                We build and develop mobile applications for several top
+                platforms, including Android & iOS.
+              </Typography>
+            </Grid2>
+
+            {/* Image Section */}
+            <Grid2 size={{ xs: 12, md: 6 }}>
+              <Box
+                sx={{
+                  flex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  mb: { xs: 3, md: 0 },
+                }}
+              >
+                <Image
+                  src="/Recent-1.png"
+                  width={500}
+                  height={500}
+                  alt="content-img"
+                  sx={{
+                    borderRadius: "8px",
+                    boxShadow: "0px 10px 10px 10px black",
+                  }}
+                />
+              </Box>
+            </Grid2>
           </Grid2>
 
           <Grid2
-            item="true"
-            xs={12}
-            sm={6}
-            backgroundColor="#42a5f5"
-            borderRadius={6}
-            size={5.5}
-            sx={{ minWidth: 275, position: "relative" }}
+            container
+            spacing={2}
+            sx={{
+              justifyContent: "center",
+              alignItems: "center",
+              color: "#fff",
+              my: "20px",
+            }}
           >
-            <CardContent>
-              <Typography
-                variant="h5"
-                sx={{ color: "white" }}
-                gutterBottom
-                fontWeight="bold"
-              >
-                Lorem Ipsum is simply
-              </Typography>
-              <Typography variant="body2" sx={{ color: "white" }}>
-                KODEX TECHNOLOGY (PVT) LTD is a team of experienced mobile and
-                web applications and website builders measuring dozens of
-                completed projects. We build and develop mobile applications for
-                several top platforms, including Android & IOS.
-              </Typography>
-            </CardContent>
-            <CardActions sx={{ justifyContent: "center" }}>
-              <Button
-                size="small"
-                variant="outlined"
+            {/* Image Section */}
+            <Grid2 size={{ xs: 12, md: 6 }}>
+              <Box
                 sx={{
-                  color: "#007bff",
-                  backgroundColor: "white",
+                  flex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  mb: { xs: 3, md: 0 },
                 }}
               >
-                View More
-              </Button>
-            </CardActions>
-          </Grid2>
-        </Grid2>
-        <br />
-        <Box>
-          <Typography
-            component="div"
-            sx={{ textAlign: "center", fontWeight: "bold" }}
-          >
-            You will be in good Company
-          </Typography>
-          <Grid2 container spacing={2} sx={{ justifyContent: "center" }}>
-            {/* Image Section */}
-            <Grid2
-              item="true"
-              xs={12}
-              sm={10}
-              md={8}
-              lg={6}
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                flexWrap: "wrap", // Allows the images to wrap on small screens
-                justifyContent: "center", // Center images horizontally
-                gap: 2, // Adds space between images
-                alignItems: "center", // Align images vertically
-              }}
-            >
-              {/* Individual Image Items */}
-              <Grid2 item="true" xs={6} sm={3} size={3}>
-                <img
-                  src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQiW8GIufaGFQIwXhw6wxeqyNRFh5Vez_M9UA2zNxyKJuBq1rjU"
-                  alt="Company 1"
-                  style={{ width: "100%", height: "50%", borderRadius: "8px" }}
+                <Image
+                  src="/website-mockup.png"
+                  width={500}
+                  height={500}
+                  alt="content-img"
+                  style={{
+                    borderRadius: "8px",
+                  }}
                 />
-              </Grid2>
-              <Grid2 item="true" xs={6} sm={3} size={3}>
-                <img
-                  src="https://media.licdn.com/dms/image/v2/C4E0BAQFstQS_kSuubg/company-logo_200_200/company-logo_200_200/0/1630568434624/caspio_logo?e=2147483647&v=beta&t=XhI9dC3xXeVR4iBH86dJThQN8sqdPlY09aoWLp2CObM"
-                  alt="Company 2"
-                  style={{ width: "100%", height: "50%", borderRadius: "8px" }}
-                />
-              </Grid2>
-              <Grid2 item="true" xs={6} sm={3} size={3}>
-                <img
-                  src="https://cdn.shortpixel.ai/spai/w_656+q_lossless+ret_img+to_auto/www.voyced.eu/wp-content/uploads/2020/03/HyperGrid.jpg"
-                  alt="Company 3"
-                  style={{ width: "100%", height: "50%", borderRadius: "8px" }}
-                />
-              </Grid2>
-              <Grid2 item="true" xs={6} sm={3} size={3}>
-                <img
-                  src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRhfjewT9yQGPu63-tCWXRHs0dcsbHQKzB6Sc5YEqS5vpa7POrt"
-                  alt="Company 4"
-                  style={{ width: "100%", height: "50%", borderRadius: "8px" }}
-                />
-              </Grid2>
+              </Box>
+            </Grid2>
+            {/* Content Section */}
+            <Grid2 size={{ xs: 12, md: 6 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: "60px",
+                    height: "60px",
+                    borderRadius: "50%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginRight: "1.8rem",
+                    marginBottom: "40px",
+                  }}
+                >
+                  <FontAwesomeIcon
+                    icon={faFaceSmile}
+                    style={{ color: "#1090CB", backgroundColor: "#fff" }}
+                  />
+                </Box>
+                <Box>
+                  <Typography variant="h5" color="#000000">
+                    Lorem Ipsum is simply dummy text
+                  </Typography>
+                  <Typography variant="subtitle1" color="textSecondary">
+                    Lorem Ipsum is simply dummy text
+                  </Typography>
+                </Box>
+              </Box>
+              <Typography variant="h4" component="h1" color="#1090CB">
+                Lorem Ipsum
+                <span style={{ color: "black" }}>
+                  {" "}
+                  is simply dummy text of the printing.
+                </span>
+              </Typography>
+              <Typography variant="body1" color="textSecondary" mt={5}>
+                KODEX TECHNOLOGY (PVT) LTD is a team of experienced mobile and
+                web application builders measuring dozens of completed projects.
+                We build and develop mobile applications for several top
+                platforms, including Android & iOS.
+              </Typography>
             </Grid2>
           </Grid2>
-        </Box>
-        <Box sx={{ background: "#e1f5fe", height: "400px" }}>
-          <Typography>
-            Lorem Ipsum is simply dummy text of the printing.
-          </Typography>
-        </Box>
+
+          <Grid2
+            container
+            spacing={2}
+            sx={{
+              justifyContent: "center",
+              alignItems: "center",
+              color: "#fff",
+              my: "20px",
+            }}
+          >
+            {/* Content Section */}
+            <Grid2 size={{ xs: 12, md: 6 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: "60px",
+                    height: "60px",
+                    borderRadius: "50%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginRight: "1.8rem",
+                    marginBottom: "40px",
+                  }}
+                >
+                  <FontAwesomeIcon
+                    icon={faFaceSmile}
+                    style={{ color: "#9208D3", backgroundColor: "#fff" }}
+                  />
+                </Box>
+                <Box>
+                  <Typography variant="h5" color="#000000">
+                    Lorem Ipsum is simply dummy text
+                  </Typography>
+                  <Typography variant="subtitle1" color="textSecondary">
+                    Lorem Ipsum is simply dummy text
+                  </Typography>
+                </Box>
+              </Box>
+              <Typography variant="h4" component="h1" color="#1090CB">
+                Lorem Ipsum
+                <span style={{ color: "black" }}>
+                  {" "}
+                  is simply dummy text of the printing.
+                </span>
+              </Typography>
+              <Typography variant="body1" color="textSecondary" mt={5}>
+                KODEX TECHNOLOGY (PVT) LTD is a team of experienced mobile and
+                web application builders measuring dozens of completed projects.
+                We build and develop mobile applications for several top
+                platforms, including Android & iOS.
+              </Typography>
+            </Grid2>
+
+            {/* Image Section */}
+            <Grid2 size={{ xs: 12, md: 6 }}>
+              <Box
+                sx={{
+                  flex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  mb: { xs: 3, md: 0 },
+                }}
+              >
+                <Image
+                  src="/layer1-guy1.png"
+                  width={500}
+                  height={500}
+                  alt="content-img"
+                  style={{
+                    borderRadius: "8px",
+                  }}
+                />
+              </Box>
+            </Grid2>
+          </Grid2>
+        </Grid2>
       </Container>
+      <InfoCard />
+      <CompanyLogo />
+      <Subscribe />
     </>
   );
 };
