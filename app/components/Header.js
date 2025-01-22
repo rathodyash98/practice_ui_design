@@ -1,25 +1,22 @@
 "use client";
-import { Container, Box, Grid2, Link, Button } from "@mui/material";
+import { Container, Box, Grid, Link, Button, Grid2 } from "@mui/material";
 
 const Header = () => {
   return (
-    <Container maxWidth="full">
+    <Container maxWidth="xl">
       <Grid2
         container
-        direction={"row"}
         spacing={2}
-        sx={{ my: 2 }}
-        alignItems={"center"}
-        justifyContent={"space-between"}
+        // style={{ my: 2 }}
+        alignItems="center"
+        justifyContent="space-between"
       >
         <Grid2 item="true" xs={12} md={4}>
           <Box
             sx={{
               fontWeight: "bold",
               color: "#1090CB",
-              xs: "1.5rem",
-              sm: "2rem",
-              md: "2.5rem",
+              fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
             }}
           >
             LOGO
@@ -29,20 +26,20 @@ const Header = () => {
         <Grid2
           item="true"
           xs={12}
-          sm={6}
           md={8}
           sx={{
             display: "flex",
             flexDirection: { xs: "column", sm: "row" },
             alignItems: "center",
             gap: { xs: 1, sm: 3, md: 5 },
-            justifyContent: { sm: "flex-end" },
+            justifyContent: { xs: "center", sm: "flex-end" },
           }}
         >
           <Link
             href="/"
             color="#000"
             sx={{
+              my: { xs: 1, sm: 0 },
               "&:hover": {
                 color: "primary.main",
               },
@@ -54,6 +51,7 @@ const Header = () => {
             href="./About"
             color="#000"
             sx={{
+              my: { xs: 1, sm: 0 },
               "&:hover": {
                 color: "primary.main",
               },
@@ -65,6 +63,7 @@ const Header = () => {
             href="../Services"
             color="#000"
             sx={{
+              my: { xs: 1, sm: 0 },
               "&:hover": {
                 color: "primary.main",
               },
@@ -73,9 +72,10 @@ const Header = () => {
             Services
           </Link>
           <Link
-            href="#"
+            href="../Blog"
             color="#000"
             sx={{
+              my: { xs: 1, sm: 0 },
               "&:hover": {
                 color: "primary.main",
               },
@@ -83,8 +83,13 @@ const Header = () => {
           >
             Blog
           </Link>
-
-          <Button href="../ContactUs" variant="contained">
+          <Button
+            href="../ContactUs"
+            variant="contained"
+            sx={{
+              my: { xs: 1, sm: 0 },
+            }}
+          >
             Contact Us
           </Button>
         </Grid2>
